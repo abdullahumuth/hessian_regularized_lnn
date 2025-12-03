@@ -1,0 +1,35 @@
+# Hessian Regularized LNN Project Requirements
+
+# Core scientific computing
+numpy>=1.26.4
+scipy>=1.15.2
+
+# PyTorch - install separately with CUDA support:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+torch>=2.8.0+cu126
+torchvision>=0.15.0+cu126
+
+# Plotting and visualization
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Image processing for animations
+pillow>=9.4.0
+
+# ODE solving
+torchode>=1.0.0
+
+# Animation support (requires FFmpeg installation separately)
+ffmpeg-python>=0.2.0
+
+# Optional: Jupyter notebook support
+# jupyter
+# ipykernel
+# notebook
+
+# Optional: Development tools  
+# black
+# pytest
+
+# Note: Built-in Python modules (no installation needed):
+# json, os, sys, time, datetime, argparse, warnings, random, copy, math, shutil

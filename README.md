@@ -291,16 +291,14 @@ The primary source of training instability in LNNs stems from computing the inve
 
 For classical systems, we penalize negative eigenvalues of the mass matrix:
 
-```
-Loss = MAE(q̈_real, q̈_predicted) + λ Σ |λᵢ| for λᵢ < 0
-```
+$$\text{Loss} = \text{MAE}(\ddot{q}_{\text{real}}, \ddot{q}_{\text{predicted}}) + \lambda \sum_{i} |\lambda_i| \text{ for } \lambda_i < 0$$
 
 This ensures the mass matrix remains positive semi-definite, which is physically required for stable classical dynamics.
 
 ### Relativistic Systems (Lorentzian Regularization)
 
 For relativistic systems where spacetime coordinates are inputs, the mass matrix must have Lorentzian signature (one negative eigenvalue for the timelike direction). We enforce:
-- The M₀₀ component (timelike) must be non-positive
+- The $M_{00}$ component (timelike) must be non-positive
 - The spatial submatrix must be positive semi-definite
 
 This allows LNNs to learn geodesic motion in curved spacetimes and extract metric tensor elements.
@@ -311,25 +309,19 @@ The `--lambda_val` parameter controls regularization strength (default: 5). High
 
 ### Lagrangian Neural Networks
 
-LNNs learn the Lagrangian function L = T - V directly. The equations of motion are derived through the Euler-Lagrange equation:
+LNNs learn the Lagrangian function $L = T - V$ directly. The equations of motion are derived through the Euler-Lagrange equation:
 
-```
-d/dt(∂L/∂q̇) - ∂L/∂q = 0
-```
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0$$
 
 This ensures energy conservation and physical consistency. The acceleration is computed as:
 
-```
-q̈ = (∇_q̇∇_q̇ᵀL)⁻¹[∇_qL - (∇_q∇_q̇ᵀL)q̇]
-```
+$$\ddot{q} = \left(\nabla_{\dot{q}}\nabla_{\dot{q}}^T L\right)^{-1}\left[\nabla_q L - \left(\nabla_q \nabla_{\dot{q}}^T L\right)\dot{q}\right]$$
 
 ### Anti-de Sitter Spacetime
 
 The AdS geodesic systems model particle motion in Anti-de Sitter spacetime using the Poincaré patch metric:
 
-```
-ds² = (L/z)² (-dt² + dx² + ... + dz²)
-```
+$$ds^2 = \frac{L^2}{z^2} \left(-dt^2 + dx^2 + \cdots + dz^2\right)$$
 
 These systems are relevant to the AdS/CFT correspondence in theoretical physics. Our Lorentzian regularization enables LNNs to learn such metrics directly from trajectory data.
 
@@ -349,21 +341,14 @@ Common issues and solutions:
 
 ## Citation
 
-If you use this code in your research, please cite:
+If you use this code in your research, please cite the following paper:
 
-```bibtex
-@article{hamzaogullari2025hessian,
-  title={Improving Lagrangian Neural Networks with Hessian Regularization},
-  author={Hamzaogullari, Abdullah Umut and Ozakin, Arkadas},
-  journal={arXiv preprint},
-  year={2025}
-}
-```
+We are preparing a formal citation for the paper. Please check back later for the updated citation information.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Apache 2.0 license.
 
 ## Contact
 
-For questions or issues, please open a GitHub issue.
+For questions or issues, please open a GitHub issue or contact me at abdullah.hamzaogullari@std.bogazici.edu.tr

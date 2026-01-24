@@ -2,11 +2,8 @@
 
 A modular and robust PyTorch implementation of **Lagrangian Neural Networks (LNNs)** with Hessian-based regularization for improved training stability. This repository accompanies the paper:
 
-**Learning Relativistic Geodesics and Chaotic Dynamics via Stabilized Lagrangian Neural Networks**
+[Learning Relativistic Geodesics and Chaotic Dynamics via Stabilized Lagrangian Neural Networks](https://arxiv.org/abs/2601.12519)
 
-Abdullah Umut Hamzaoğulları, Arkadaş Özakın
-
-arXiv: [https://arxiv.org/abs/2601.12519](https://arxiv.org/abs/2601.12519)
 
 ## Overview
 

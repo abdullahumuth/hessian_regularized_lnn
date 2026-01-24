@@ -1,6 +1,12 @@
 # Hessian Regularized Lagrangian Neural Networks
 
-A modular, robust implementation of Lagrangian Neural Networks (LNNs) with Hessian regularization in PyTorch. This repository accompanies the paper *"Improving Lagrangian Neural Networks with Hessian Regularization"*.
+A modular and robust PyTorch implementation of **Lagrangian Neural Networks (LNNs)** with Hessian-based regularization for improved training stability. This repository accompanies the paper:
+
+**Learning Relativistic Geodesics and Chaotic Dynamics via Stabilized Lagrangian Neural Networks**
+
+Abdullah Umut Hamzaoğulları, Arkadaş Özakın
+
+arXiv: [https://arxiv.org/abs/2601.12519](https://arxiv.org/abs/2601.12519)
 
 ## Overview
 
